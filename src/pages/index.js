@@ -44,7 +44,14 @@ Post{data.allMarkdownRemark.totalCount > 1 ? 's' : ''}</h4>
           
         </span>
         
+    <span
+    css={css`
+    color: #656464;
+    font-size: 16px;
+    padding-left: 15px;
 
+    `}
+    >author - {data.site.siteMetadata.author}</span>
       </h3>
       
     <p>{node.excerpt}</p>
@@ -77,6 +84,12 @@ query {
         excerpt
       }
     }
+    
   }
+  site {
+      siteMetadata {
+        author
+      }
+    }
 }
 `
