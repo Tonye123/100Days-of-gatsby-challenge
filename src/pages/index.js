@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import { graphql } from "gatsby"
 import { css } from "@emotion/core"
 import { rhythm } from "../utils/typography"
+import SEO from '../components/seo'
 
 export default ({ data }) => {
   console.log(data)
@@ -11,6 +12,7 @@ export default ({ data }) => {
 return (
 
   <Layout>
+    <SEO title="Home"/>
     <h1
     css={css`
       display: flex;
