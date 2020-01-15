@@ -17,10 +17,22 @@ return (
     css={css`
       display: flex;
       justify-content: center;
-      border-bottom: 1px solid #ccc;
+      
+      
       
     `}
     >100Days of Gatsby</h1>
+    <hr
+      css={css`
+      width: 20%;
+      text-align: center;
+      margin: auto;
+     
+      
+      
+      
+    `}
+    />
     <h4>{data.allMarkdownRemark.totalCount} 
 Post{data.allMarkdownRemark.totalCount > 1 ? 's' : ''}</h4>
   {data.allMarkdownRemark.edges.map(({node})=>(

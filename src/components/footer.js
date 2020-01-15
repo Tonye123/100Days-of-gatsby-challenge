@@ -3,7 +3,7 @@ import React from 'react'
 
 
 let style = {
-    backgroundColor: "#F8F8F8",
+    backgroundColor: "#f1f0f0",
     borderTop: "1px solid #E7E7E7",
     textAlign: "center",
     padding: "20px",

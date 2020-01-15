@@ -1,5 +1,5 @@
 import React from "react"
-import { css } from "@emotion/core"
+import { css, Global } from "@emotion/core"
 import { useStaticQuery, Link, graphql } from "gatsby"
 import Footer from './footer'
 
@@ -21,13 +21,14 @@ export default ({ children }) => {
   return (
     <div
       css={css`
-      
+        
         margin: 0 auto;
         max-width: 700px;
         padding: ${rhythm(2)};
         padding-top: ${rhythm(1.5)};
       `}
     >
+      
       <Link to={`/`}>
         <h3
           css={css`
@@ -41,6 +42,14 @@ export default ({ children }) => {
         </h3>
         
       </Link>
+      <Global 
+         styles= {css`
+           body {
+              background: papayawhip;
+           }
+         `}
+      
+      />
      
       
       {children}
