@@ -1,6 +1,8 @@
 ---
 title: "Challenge 1 - Create a Gatsby blog from scratch"
 date: "2020-01-04"
+featuredImage: '../images/alejandro-escamilla.jpg'
+
 ---
 
 This has been fun so far. I really enjoyed going through the tutorial and setting this up. I have been wanting for the longest time to learn gatsby and graphQL.

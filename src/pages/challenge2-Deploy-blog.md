@@ -1,6 +1,7 @@
 ---
 title: "Challenge 2 - Build and Deploy your Gatsby Site"
 date: "2020-01-13"
+featuredImage: '../images/zany-jadraque.jpg'
 ---
 
 So for the second challenge, we were asked to deploy our sites, I believe from challenge 1. This part I had already done, so for this challenge I learnt about sourcing data from wordpress. I decided to work with wordpress cause of my background with wordpress.

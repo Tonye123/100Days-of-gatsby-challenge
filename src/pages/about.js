@@ -1,16 +1,26 @@
 import React from "react"
 import Layout from "../components/layout"
 import { graphql } from 'gatsby'
+import Img from "gatsby-image"
+import SEO from "../components/seo"
 
-export default ( {data}) => (
+export default ( {data}) => {
+  
+return (
   <Layout>
-    <h1>About {data.site.siteMetadata.title}</h1>
+    <SEO title = "About" />
+    <h1>About {data.site.siteMetadata.author}.</h1>
+    <Img 
+      fixed = {data.file.childImageSharp.fixed}
+      alt="Tonyes' Selfie"
+    />
     <p>
-      We're the only site running on your computer dedicated to showing the best
-      photos and videos of pandas eating lots of food.
+      Hi! My name is Tonye. I am a Front-End Developer! 
     </p>
   </Layout>
 )
+
+}
 
 
 export const query = graphql`
@@ -18,6 +28,14 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        author
+      }
+    }
+    file(relativePath: {eq: "selfie.jpg"}) {
+      childImageSharp {
+        fixed(height: 320, width: 240) {
+          ...GatsbyImageSharpFixed
+        }
       }
     }
   }

@@ -11,14 +11,41 @@ module.exports = {
     author: `Tonye O`,
   },
   plugins: [
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            },
+          },
+        ],
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-remark`,
+    `gatsby-remark-images`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `src`,
-        path: `${__dirname}/src/`,
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
       },
+      
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+      
+    },
+    
     `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-plugin-typography`,
