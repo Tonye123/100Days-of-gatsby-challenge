@@ -17,6 +17,7 @@ return (
     css={css`
       display: flex;
       justify-content: center;
+      text-align: center;
       
       
       

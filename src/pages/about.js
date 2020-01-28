@@ -40,6 +40,15 @@ const StyledDiv = styled.div`
     font-weight: bold;
     margin-bottom: 1rem;
   }
+
+
+  @media only screen and (max-width : 320px) {
+    input[type="email"], input[type="text"], input[type="number"], textarea, select {
+          width: 80vw;
+      }
+    }
+
+
 `
 
 
@@ -50,11 +59,16 @@ export default ( {data}) => {
 return (
   <Layout>
     <SEO title = "About" />
-    <h1>About {data.site.siteMetadata.author}.</h1>
+    <h1 css={css`
+       text-align: center;
+
+      `} 
+    >About {data.site.siteMetadata.author}.</h1>
     <Img
       css={css`
         border: 5px solid white;
         border-radius: 2px;
+       
 
       `} 
       fixed = {data.file.childImageSharp.fixed}
