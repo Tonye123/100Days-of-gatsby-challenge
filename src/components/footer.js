@@ -3,11 +3,11 @@ import React from 'react'
 
 
 let style = {
-    backgroundColor: "#f1f0f0",
-    borderTop: "1px solid #E7E7E7",
+   
+    
     textAlign: "center",
-    padding: "20px",
-    position: "fixed",
+    
+    position: "relative",
     left: "0",
     bottom: "0",
     width: "100%",
@@ -15,7 +15,7 @@ let style = {
 
 let phantom = {
   display: 'block',
-  padding: '20px',
+  marginTop: '40px',
   height: '60px',
   width: '100%',
 }

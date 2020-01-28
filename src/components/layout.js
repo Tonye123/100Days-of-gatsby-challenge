@@ -27,6 +27,8 @@ export default ({ children }) => {
         max-width: 700px;
         padding: ${rhythm(2)};
         padding-top: ${rhythm(1.5)};
+        height; 100vh;
+        padding-bottom: 0px;
       `}
     >
       <header>
