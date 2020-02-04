@@ -2,9 +2,10 @@ import React from "react"
 import { css, Global } from "@emotion/core"
 import { useStaticQuery, Link, graphql } from "gatsby"
 import Footer from './footer'
-
-
 import { rhythm } from "../utils/typography"
+
+
+
 
 export default ({ children }) => {
   const data = useStaticQuery(
@@ -48,6 +49,9 @@ export default ({ children }) => {
       <ul style={{float: "right"}}>
           <li style={{ display: `inline-block`, marginRight: `1rem` }}>
             <Link to={`/about/`}>About</Link>
+        </li>
+        <li style={{ display: `inline-block`, marginRight: `1rem` }}>
+            <Link to={`/contact/`}>Contact Me</Link>
         </li>
       </ul>
 

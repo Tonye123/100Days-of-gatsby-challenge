@@ -7,6 +7,7 @@ import { css } from "@emotion/core"
 import { Formik, Field, Form, ErrorMessage  } from 'formik'
 import * as Yup from 'yup'
 import styled from '@emotion/styled'
+import Forms from '../components/Forms'
 
 
 const StyledDiv = styled.div`
@@ -127,6 +128,7 @@ return (
         
 
     </Formik>
+  
   </Layout>
 )
 
