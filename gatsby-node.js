@@ -11,6 +11,22 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       value: slug,
     })
   }
+  else if (node.internal.type === "Mdx") {
+      const value = createFilePath({ node, getNode })
+      createNodeField({
+        // Name of the field you are adding
+        name: "slug",
+        // Individual MDX node
+        node,
+        // Generated value based on filepath with "blog" prefix. you
+        // don't need a separating "/" before the value because
+        // createFilePath returns a path with the leading "/".
+        value: `/blog${value}`,
+      })
+    }
+
+  
+
 }
 
 exports.createPages = async ({ graphql, actions }) => {
@@ -42,6 +58,7 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 }
 
+
 exports.createPages = async ({ graphql, actions, reporter }) => {
   // Destructure the createPage function from the actions object
   const { createPage } = actions
@@ -52,7 +69,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         edges {
           node {
             id
-            frontmatter {
+            fields {
               slug
             }
           }

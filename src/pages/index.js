@@ -76,11 +76,15 @@ Post{data.allMarkdownRemark.totalCount > 1 ? 's' : ''}</h4>
     </div>
 
   ))}
+
+
     
   </Layout>
 )
 
 }
+
+
 
 export const query = graphql`
 query {
@@ -106,5 +110,6 @@ query {
         author
       }
     }
+    
 }
 `

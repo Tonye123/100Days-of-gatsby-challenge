@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { Formik, Field, Form, ErrorMessage  } from 'formik'
+import { Formik, Field, Form, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
-import Layout from './layout'
+
 
 
 const StyledDiv = styled.div`
@@ -27,6 +27,11 @@ const StyledDiv = styled.div`
     border-radius: 10px;
 }
 
+   input.error, textarea.error{
+    border-color: red;
+    color: red;
+  }
+
   button {
     display: flex;
     padding: 0.5rem 1.25rem;
@@ -36,6 +41,8 @@ const StyledDiv = styled.div`
     font-weight: bold;
     margin-bottom: 1rem;
   }
+
+  
 
 
   @media only screen and (max-width : 320px) {
@@ -51,7 +58,7 @@ const StyledDiv = styled.div`
 
  const Forms = ()=> {
   return (
-    <Layout>
+    
         <Formik
               initialValues={{firstName: "", email:"", message:""}}
               validationSchema={Yup.object({
@@ -81,15 +88,53 @@ const StyledDiv = styled.div`
                   
                   <Form>
                       <StyledDiv>
-                        <h2>Say Hello...</h2>
+                        <h2>Lets work together!</h2>
                         <label  htmlFor="firstName">First Name</label>
-                        <Field name="firstName" type="text" />
-                        <ErrorMessage name="firstName" /> 
+                        <Field name="firstName">
+                      {({
+                    field, 
+                    form: { touched, errors }, 
+                    meta,
+                      }) => (
+                    <div>
+                      <input type="text" placeholder="firstName" {...field} 
+                      className= {meta.touched && meta.error ? "error" : '' }/>
+                     </div>
+                      )}
+                        </Field>
+                        <ErrorMessage name="firstName" />  
+
                         <label  htmlFor="email">Email Address</label>
-                        <Field name="email" type="email" />
+                        <Field name="email">
+                        {({
+                    field, 
+                    form: { touched, errors }, 
+                    meta,
+                      }) => (
+                    <div>
+                      <input type="email" placeholder="email" {...field} 
+                      className= {meta.touched && meta.error ? "error" : '' }/>
+                     </div>
+                      )}
+                        </Field>
                         <ErrorMessage name="email" />
-                        <label htmlFor="message"> Reason for getting in touch</label>
-                        <Field name="message" as="textarea"  className="form-input"/>
+
+                        <label htmlFor="message"> Leave a message</label>
+                            <Field name="message"   className="form-input">
+                            {({
+                        field, 
+                        form: { touched, errors }, 
+                        meta,
+                          }) => (
+                        <div>
+                          <textarea type="text"  {...field} 
+                          className= {meta.touched && meta.error ? "error" : '' }></textarea>
+                        </div>
+                          )}
+
+                        </Field>
+
+
                         <ErrorMessage name="message" /> 
                         <button type="submit" disabled={isSubmitting}>Submit</button>
 
@@ -100,7 +145,7 @@ const StyledDiv = styled.div`
                 
 
             </Formik>
-      </Layout>
+      
 
   )
 
