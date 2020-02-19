@@ -11,6 +11,14 @@ module.exports = {
     author: `Tonye O`,
   },
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
+      },
+      
+    },
     `gatsby-plugin-mdx`,
     {
       resolve: "gatsby-source-filesystem",
@@ -37,14 +45,7 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-remark-images`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages`,
-      },
-      
-    },
+    
     {
       resolve: `gatsby-source-filesystem`,
       options: {
