@@ -97,7 +97,7 @@ const StyledDiv = styled.div`
                     meta,
                       }) => (
                     <div>
-                      <input type="text" placeholder="firstName" {...field} 
+                      <input id = "firstName" type="text" placeholder="firstName" {...field} 
                       className= {meta.touched && meta.error ? "error" : '' }/>
                      </div>
                       )}
@@ -112,7 +112,7 @@ const StyledDiv = styled.div`
                     meta,
                       }) => (
                     <div>
-                      <input type="email" placeholder="email" {...field} 
+                      <input id="email" type="email" placeholder="email" {...field} 
                       className= {meta.touched && meta.error ? "error" : '' }/>
                      </div>
                       )}
@@ -127,7 +127,7 @@ const StyledDiv = styled.div`
                         meta,
                           }) => (
                         <div>
-                          <textarea type="text"  {...field} 
+                          <textarea type="text" id="message"  {...field} 
                           className= {meta.touched && meta.error ? "error" : '' }></textarea>
                         </div>
                           )}

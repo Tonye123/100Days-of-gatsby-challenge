@@ -6,11 +6,13 @@
 
 module.exports = {
   siteMetadata: {
+    siteUrl: `https://gatsbyblogchallengetonye.netlify.com/`,
     title: `My Blog`,
     description: `Blog setup for the  100days of gatsby ...`,
     author: `Tonye O`,
   },
   plugins: [
+    `gatsby-plugin-advanced-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -78,5 +80,6 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
+    
   ],
 }

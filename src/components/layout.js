@@ -34,7 +34,7 @@ export default ({ children }) => {
     >
       <header>
       <Link to={`/`}>
-        <h3
+        <h1
           css={css`
             margin-bottom: ${rhythm(2)};
             display: inline-block;
@@ -43,7 +43,7 @@ export default ({ children }) => {
         >
           {data.site.siteMetadata.title}
           
-        </h3>
+        </h1>
         
       </Link>
       <ul style={{float: "right"}}>
